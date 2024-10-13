@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react"
-import Input from "./components/Input"
-import Button from "./components/Button"
-import Separator from "./components/Separator"
+import Input from "../components/Input"
+import Button from "../components/Button"
+import Separator from "../components/Separator"
 import { AiFillFacebook } from "react-icons/ai"
 import { Formik, Form } from "formik";
-function App() {
+function Login() {
   const ref = useRef()
   const images = [
     '/src/assets/photo1.png',
@@ -74,4 +74,4 @@ function App() {
   )
 }
 
-export default App
+export default Login
