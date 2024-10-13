@@ -1,9 +1,10 @@
 import { useEffect, useRef } from "react"
-import Input from "../components/Input"
-import Button from "../components/Button"
-import Separator from "../components/Separator"
+import Input from "../../components/Input"
+import Button from "../../components/Button"
+import Separator from "../../components/Separator"
 import { AiFillFacebook } from "react-icons/ai"
 import { Formik, Form } from "formik";
+import { Link } from "react-router-dom"
 function Login() {
   const ref = useRef()
   const images = [
@@ -69,6 +70,9 @@ function Login() {
             )}
           </Formik>
         </div>
+        <div className="bg-white border p-4 text-sm text-center">
+					Don't have an account? <Link to="/register" className="font-semibold text-brand">Sign up</Link>
+				</div>
       </div>
     </div>
   )
