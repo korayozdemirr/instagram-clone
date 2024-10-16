@@ -1,11 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
+import SideBar from '../components/SideBar'
 
 function Layout({ children }) {
     return (
         <>
-        <Header />
-            <div className="container mx-auto pt-4">
+            <div className="">
+                <SideBar />
                 {children}
             </div>
         </>

@@ -13,6 +13,9 @@ export default {
       },
       backgroundImage: {
         'logo-pattern': 'url(assets/home-phones-2x.png)'
+      },
+      fontFamily:{
+        'sans': ['Helvetica', 'Arial', 'sans-serif'],
       }
     },
   },

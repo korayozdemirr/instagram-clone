@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function Register() {
   return (
-    <div className="w-full h-full flex items-center justify-center">
+    <div className="h-full w-full flex flex-wrap overflow-auto items-center gap-x-8 justify-center">
       <div className="w-[350px]  gap-y-3">
         <div className="bg-white border px-[40px] pt-10 pb-6">
           <div className="flex justify-center mb-4">
