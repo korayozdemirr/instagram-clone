@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function SideBar() {
   return (
     <div className="flex sticky w-[248px] h-screen flex-col border-r p-3 font-sans">
-      <div className="mb-7 mt-5 p-3">
+      <div className="mb-6 mt-4 p-3">
         <img src="/src/assets/logo.png" alt="instagram" className="w-[105px]" />
       </div>
       <nav className="flex flex-col gap-y-2 mb-10">
@@ -77,9 +77,10 @@ function SideBar() {
           )}
         </NavLink>
       </nav>
-      <div className="flex gap-x-4 p-3">
+      <div className="flex w-full rounded gap-x-4 p-3 cursor-pointer hover:bg-zinc-200" onClick={()=>{}}>
+        
         <Icon name="hamburger" size={24} />
-        <p>Daha Fazlası</p>
+        <p>Daha Fazla</p>
       </div>
     </div>
   );
