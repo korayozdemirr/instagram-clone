@@ -77,8 +77,52 @@ function SideBar() {
           )}
         </NavLink>
       </nav>
-      <div className="flex w-full rounded gap-x-4 p-3 cursor-pointer hover:bg-zinc-200" onClick={()=>{}}>
-        
+      <div
+        className="flex w-full rounded gap-x-4 p-3 cursor-pointer relative hover:bg-zinc-200"
+        onClick={() => {}}
+      >
+        <div className="flex flex-col absolute bg-zinc-50 shadow-2xl w-[266px] rounded-lg p-6 bottom-11">
+          <NavLink to="#" className="hover:bg-zinc-200 rounded p-3">
+            <div className="flex items-center gap-x-4 font-normal">
+              <Icon name="settings" size={24} />
+              <span>Ayarlar</span>
+            </div>
+          </NavLink>
+          <NavLink to="#" className="hover:bg-zinc-200 rounded p-3">
+            <div className="flex items-center gap-x-4 font-normal">
+              <Icon name="activity" size={24} />
+              <span>Haraketlerin</span>
+            </div>
+          </NavLink>
+          <NavLink to="#" className="hover:bg-zinc-200 rounded p-3">
+            <div className="flex items-center gap-x-4 font-normal">
+              <Icon name="saved" size={24} />
+              <span>Kaydedilenler</span>
+            </div>
+          </NavLink>
+          <NavLink to="#" className="hover:bg-zinc-200 rounded p-3">
+            <div className="flex items-center gap-x-4 font-normal">
+              <Icon name="sun" size={24} />
+              <span>Görünümü değiştir</span>
+            </div>
+          </NavLink>
+          <NavLink to="#" className="hover:bg-zinc-200 rounded p-3">
+            <div className="flex items-center gap-x-4 font-normal">
+              <Icon name="feedback" size={24} />
+              <span>Bir sorun bildir</span>
+            </div>
+          </NavLink>
+          <NavLink to="#" className="hover:bg-zinc-200 rounded p-3">
+            <div className="flex items-center gap-x-4 font-normal">
+              <span>Hesap değiştir</span>
+            </div>
+          </NavLink>
+          <NavLink to="#" className="hover:bg-zinc-200 rounded p-3">
+            <div className="flex items-center gap-x-4 font-normal">
+              <span>Çıkış yap</span>
+            </div>
+          </NavLink>
+        </div>
         <Icon name="hamburger" size={24} />
         <p>Daha Fazla</p>
       </div>
