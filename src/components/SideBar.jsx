@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Icon from "./Icon";
 import { NavLink } from "react-router-dom";
+import classNames from "classnames";
 function SideBar() {
+  const [open, setOpen] = useState(true);
+  const ref = useRef();
+  useState(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpen(true)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div className="flex sticky w-[248px] h-screen flex-col border-r p-3 font-sans">
       <div className="mb-6 mt-4 p-3">
@@ -79,9 +94,15 @@ function SideBar() {
       </nav>
       <div
         className="flex w-full rounded gap-x-4 p-3 cursor-pointer relative hover:bg-zinc-200"
-        onClick={() => {}}
+        onClick={() => setOpen(false)}
       >
-        <div className="flex flex-col absolute bg-zinc-50 shadow-2xl w-[266px] rounded-lg p-6 bottom-11">
+        <div
+          ref={ref}
+          className={classNames({
+            "flex flex-col absolute bg-zinc-50 shadow-2xl w-[266px] rounded-lg p-6 bottom-11": true,
+            hidden: open,
+          })}
+        >
           <NavLink to="#" className="hover:bg-zinc-200 rounded p-3">
             <div className="flex items-center gap-x-4 font-normal">
               <Icon name="settings" size={24} />
