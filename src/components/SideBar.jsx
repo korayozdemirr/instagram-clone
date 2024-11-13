@@ -18,7 +18,7 @@ function SideBar() {
     };
   }, []);
   return (
-    <div className="flex sticky w-[248px] h-screen flex-col border-r p-3 font-sans">
+    <div className="flex fixed w-[248px] h-screen flex-col border-r p-3 font-sans">
       <div className="mb-6 mt-4 p-3">
         <img src="/src/assets/logo.png" alt="instagram" className="w-[105px]" />
       </div>

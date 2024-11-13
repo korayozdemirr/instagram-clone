@@ -5,8 +5,8 @@ import SideBar from '../components/SideBar'
 function Layout({ children }) {
     return (
         <>
-            <div className="">
-                <SideBar />
+            <div className="flex">
+                <SideBar/>
                 {children}
             </div>
         </>
